@@ -1,4 +1,4 @@
 coleticidade-client
 ===================
 
-Client side back end application
+Client side back end applications
