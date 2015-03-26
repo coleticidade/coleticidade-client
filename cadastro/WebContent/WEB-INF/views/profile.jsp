@@ -1,4 +1,6 @@
+<%@ page pageEncoding="utf-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,7 +61,7 @@
                         <ul class="dropdown-perfil">
                           <li><a href="#"> Novidade <span class="badge badge-notification">2</span> </a></li>
                           <li><a href="#"> Apoiando <span class="badge badge-notification">1</span></a></li>
-                          <li><a href="#"> Seguindo <span class="badge badge-notification">2</span></a></li>
+                         <!--   <li><a href="#"> Seguindo <span class="badge badge-notification">2</span></a></li> -->
                           <li><a href="#"> Meus projetos <span class="badge badge-notification">4</span></a></li>
                           <li> <a href="#">Meu perfil <span class="badge badge-notification">3</span></a></li>
                         </ul>
@@ -126,20 +128,20 @@
       <span class="line"> &nbsp; </span>
       <div class="row name-box-perfil">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 ">
-          <h4> THOMMY NOZAKI </h4>
+          <h4> ${profile.name}</h4>
         </div>
         <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 banner-count-perfil">
           <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3">  </div>
           <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
-            <p> 21<br>
-              <span> CRIADOS </span></p>
+            <p> ${profile.created}<br>
+              <span> CRIADOS</span></p>
           </div>
           <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
-            <p> 02 <br>
+            <p> ${profile.suported} <br>
               <span> APOIADOS </span></p>
           </div>
           <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
-            <p> 16 <br>
+            <p> ${profile.following} <br>
               <span> SEGUINDO </span></p>
           </div>
         </div>
@@ -159,12 +161,12 @@
 <div class="position-relative">
   <div class="container-fluid menu-perfil">
     <div class="container">
-      <div class="picture-perfil"> <img src="assets/image/perfil/perfil-user.jpg"> </div>
+      <div class="picture-perfil"> <img src="${profile.image}"> </div>
       <div class="col-lg-11 col-md-11 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-2 col-xs-offset-2 remove-pl">
         <ul class="nav nav-tabs perfil-tabs">
           <li class="active"><a href="#novidade" data-toggle="tab">NOVIDADE</a></li>
           <li><a href="#apoiando" data-toggle="tab">APOIANDO</a></li>
-          <li><a href="#seguindo" data-toggle="tab">SEGUINDO</a> </li>
+         <!--  <li><a href="#seguindo" data-toggle="tab">SEGUINDO</a> </li>  -->
           <li><a href="#meusprojetos" data-toggle="tab">MEUS PROJETOS</a> </li>
           <li><a href="#meuperfil" data-toggle="tab">MEU PERFIL</a> </li>
         </ul>
@@ -1030,7 +1032,7 @@
                   <div class="tab-pane active" id="dados-pessoais">
                     <div class="row">
                       <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2 col-xxs-12 text-center remove-pl">
-                        <div class="picture-perfil-tab"> <img src="assets/image/perfil/perfil-user.jpg"> </div>
+                        <div class="picture-perfil-tab"> <img src="${profile.image}"> </div>
                         <a href="#">Alterar Foto </a> </div>
                       <div class="col-lg-7 col-md-7 col-xs-5 col-sm-5 col-xxs-12">
                         <form role="form">
